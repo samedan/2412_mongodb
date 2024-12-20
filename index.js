@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 // mongoose
 mongoose
   .connect(
-    "mongodb+srv://samedan:xaDGWLQ5NRo2dJs2@backenddb.igk1i.mongodb.net/Node-API?retryWrites=true&w=majority&appName=backenddb"
+    process.env.MONGODB
   )
   .then(() => {
     console.log("Connected to DB");
